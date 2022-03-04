@@ -1,0 +1,26 @@
+KLAR FÖR TEST
+
+ID
+--
+TF005v1
+
+Namn
+----
+Test av vibrationssensor, rörelselarm
+
+Beskrivning
+-----------
+Syfte: Verifiera att vibrationssensorn i rörelselarmet fungerar enligt
+specifikationen i projektrapporten.
+Komponent: P2
+Krav: K09
+
+Teststeg
+--------
+1. Ställ in känsligheten för vibrationssensorn.
+2. Simulera att en glasruta krossas.
+3. Upprepa steg 1-2 med olika känslighet för vibrationssensorn.
+
+Förväntat resultat
+------------------
+När simuleringen av att en glasruta krossas sker, ska larmet gå.

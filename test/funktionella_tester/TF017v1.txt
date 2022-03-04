@@ -1,0 +1,24 @@
+KLAR FÖR TEST
+
+ID
+--
+TF017v1
+
+Namn
+----
+Test av störenheten
+
+Beskrivning
+-----------
+Syfte: Verifiera att volymen data som störenheten skickar kan justeras.
+Komponent: S
+Krav: K10
+
+Teststeg
+--------
+1. Ändra volymen data som störenheten kan skicka.
+2. Verifiera att volymen data som störenheten skickar är ändrad.
+
+Förväntat resultat
+------------------
+Volymen data som störenheten skickar är ändrad enligt specifikation.

@@ -1,0 +1,26 @@
+KLAR FÖR TEST
+
+ID
+--
+TF009v1
+
+Namn
+----
+Test av centralenheten, periferienhet kopplas från nätverket
+
+Beskrivning
+-----------
+Syfte: Verifiera att centralenheten larmar om en periferienhet kopplas från 
+nätverket.
+Komponent: C
+Krav: K13
+
+Teststeg
+--------
+1. Anslut en periferienhet till nätverket.
+2. Koppla bort periferienheten från nätverket genom att dra ut 
+strömförsörjningsadaptern.
+
+Förväntat resultat
+------------------
+Centralenheten ska larma.

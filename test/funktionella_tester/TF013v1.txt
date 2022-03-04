@@ -1,0 +1,24 @@
+KLAR FÖR TEST
+
+ID
+--
+TF013v1
+
+Namn
+----
+Larm av flera dörrar med samma enhet
+
+Beskrivning
+-----------
+Syfte: Verifiera att flera dörrar kan larmas med samma enhet.
+Komponent: P1
+Krav: K03
+
+Teststeg
+--------
+1. Larma flera dörrar från P1.
+2. Upprepa steg 1 med olika antal dörrar.
+
+Förväntat resultat
+------------------
+Flera dörrar ska kunna larmas med samma enhet.

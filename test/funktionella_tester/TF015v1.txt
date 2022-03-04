@@ -1,0 +1,23 @@
+KLAR FÖR TEST
+
+ID
+--
+TF015v1
+
+Namn
+----
+Test av konfiguration av antalet dörrar på P1.
+
+Beskrivning
+-----------
+Syfte: Verifiera att antalet dörrar för en dörrlarmsenhet kan konfigureras.
+Komponent: P1
+Krav: K05
+
+Teststeg
+--------
+1. Konfigurera antalet dörrar för en dörrlarmsenhet vid uppstart.
+
+Förväntat resultat
+------------------
+Antalet dörrar ska kunna konfigureras.

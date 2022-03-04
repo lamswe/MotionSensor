@@ -1,0 +1,5 @@
+Saker vi kommer på under arbetets gång som är bra att ta upp i projekplanen:
+
+- Nämn att vi har ett fjärrarkiv på Github och beskriv hur vi använder det + att vi använder Git
+- Beskriv hur vi versionshanterar mjukvara
+- Beskriv hur vi märker upp vår hårdvara

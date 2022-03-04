@@ -1,0 +1,23 @@
+KLAR FÖR TEST
+
+ID
+--
+TP001v1
+
+Namn
+----
+Rörelsesensorns räckvidd
+
+Beskrivning
+-----------
+Syfte: Undersök räckvidden för rörelsesensorn.
+Komponent: P2
+Krav: Saknas
+
+Teststeg
+--------
+1. Undersök räckvidden för rörelsesensorn.
+
+Förväntat resultat
+------------------
+Se teststeg 1.

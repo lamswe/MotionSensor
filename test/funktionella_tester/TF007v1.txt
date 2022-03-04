@@ -1,0 +1,25 @@
+KLAR FÖR TEST
+
+ID
+--
+TF007v1
+
+Namn
+----
+Test av centralenheten, uppstart
+
+Beskrivning
+-----------
+Syfte: Verifiera att centralenheten känner till anslutna enheter och deras 
+konfigurering vid uppstart.
+Komponent: C
+Krav: K12
+
+Teststeg
+--------
+1. Verifiera att centralenheten känner till anslutna enheter och deras 
+konfiguration vid uppstart.
+
+Förväntat resultat
+------------------
+Se teststeg 1.

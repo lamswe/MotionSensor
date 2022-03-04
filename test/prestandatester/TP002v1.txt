@@ -1,0 +1,23 @@
+KLAR FÖR TEST
+
+ID
+--
+TP002v1
+
+Namn
+----
+Störning på CAN-bussen
+
+Beskrivning
+-----------
+Syfte: Undersöka hur mycket störning systemet klarar på CAN-bussen.
+Komponent: CAN-buss
+Krav: Saknas
+
+Teststeg
+--------
+1. Undersök hur mycket störning systemet klarar på CAN-bussen.
+
+Förväntat resultat
+------------------
+Se teststeg 1.

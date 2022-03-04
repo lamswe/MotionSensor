@@ -1,0 +1,28 @@
+KLAR FÖR TEST
+
+ID
+--
+TF004v1
+
+Namn
+----
+Test av avståndsmätare, rörelselarm
+
+Beskrivning
+-----------
+Syfte: Verifiera att avståndsmätaren i rörelselarmet fungerar enligt
+specifikationen i projektrapporten.
+Komponent: P2
+Krav: K07
+
+Teststeg
+--------
+1. Kalibrera avståndsmätaren.
+2. Ställ in känslighet.
+3. Gå inom känslighetsområdet för avståndsmätaren.
+3. Upprepa steg 2-3 med olika känslighet.
+
+Förväntat resultat
+------------------
+Larmet ska gå när någon rör sig inom avståndsmätarens känslighetsområde.
+

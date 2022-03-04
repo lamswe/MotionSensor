@@ -1,0 +1,27 @@
+KLAR FÖR TEST
+
+ID
+--
+TF003v1
+
+Namn
+----
+Konfigurering av tid en dörr tillåts vara öppen
+
+Beskrivning
+-----------
+Syfte: Verifiera att tiden en dörr tillåts vara öppen kan ändras via 
+centralenheten.
+Komponent: P1 och C
+Krav: K06
+
+Teststeg
+--------
+1. Konfigurera tiden en dörr tillåts vara öppen via centralenheten.
+2. Öppna dörren.
+3. Vänta tills larmet går.
+4. Upprepa steg 1-3 flera gånger med olika tider.
+
+Förväntat resultat
+------------------
+Efter att tiden som konfigurerats via centralenheten passerat ska larmet gå.

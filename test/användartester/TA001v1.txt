@@ -1,0 +1,25 @@
+KLAR FÖR TEST
+
+ID
+--
+TA001v1
+
+Namn
+----
+Test av systemet utifrån ett användarperspektiv
+
+Beskrivning
+-----------
+Syfte: Verifiera att systemet har en god användarupplevelse.
+Komponent: P1, P2, C
+Krav: Saknas.
+
+Teststeg
+--------
+1. Starta upp systemet.
+2. Använd systemet.
+
+Förväntat resultat
+------------------
+Systemet ska ha en god användarupplevelse.
+Kommentarer ska antecknas.

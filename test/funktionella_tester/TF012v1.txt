@@ -1,0 +1,25 @@
+KLAR FÖR TEST
+
+ID
+--
+TF012v1
+
+Namn
+----
+Test av centralenheten larmfunktion (2/2)
+
+Beskrivning
+-----------
+Syfte: Verifiera att när ett larm uppstår kommunicerar centralenheten det till
+en ansluten PC via USART.
+Komponent: C och P2
+Krav: K11
+
+Teststeg
+--------
+1. Starta ett larm från P2.
+2. Upprepa steg 1 med samtliga olika sätt att starta larm på.
+
+Förväntat resultat
+------------------
+När larmet går kommunicerar centralenheten detta till en ansluten PC.

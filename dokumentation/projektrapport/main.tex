@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+\usepackage[swedish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{appendix}
+\usepackage{acro}
+\usepackage[dvips]{graphicx}
+\usepackage{float}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\title{\textbf{Utveckling och konstruktion av larmsystem med MD407-enheter} \newline \newline \large Larmsystem med centralenhet, dörrlarmsenhet, rörelselarmsenhet samt en störenhet för teständamål}
+\author{Daniel Ferriera, Christoffer Kaltenbrunner, \\Lam Nguyen, Erik Söderpalm, Jakob Wik}
+%\date{datum goes here}
+\maketitle
+
+\begin{center}
+Datateknik, DAT290
+\end{center}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}   \hline
+         & Namn & Datum \\ \hline
+Granskad &      &       \\ \hline
+Godkänd  &      &       \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Introduktion}
+\input{introduktion.tex}
+\newpage
+
+\section{Teknisk beskrivning}
+\input{teknisk_beskrivning.tex}
+\newpage
+
+\section{Resultat}
+\input{resultat.tex}
+\newpage
+
+\section{Diskussion}
+\label{sec:Diskussion}
+\input{diskussion.tex}
+\newpage
+
+\section{Slutsats}
+\input{slutsats.tex}
+\newpage
+
+\appendix
+\section{Tester}
+\label{sec:app_a}
+\input{appendix_A.tex}
+\newpage
+
+\section{Testresultat}
+\label{sec:app_b}
+\input{appendix_B.tex}
+\newpage
+
+\input{referenser.tex}
+
+\end{document}
+
+

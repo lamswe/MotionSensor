@@ -1,0 +1,24 @@
+KLAR FÖR TEST
+
+ID
+--
+TF010v1
+
+Namn
+----
+Test av upptäckt av främmande trafik på nätverket.
+
+Beskrivning
+-----------
+Syfte: Testa systemets funktion för att upptäcka främmande trafik på nätverket.
+Komponent: C
+Krav: Saknas
+
+Teststeg
+--------
+1. Anslut en enhet som inte har konfigurerats till nätverket.
+2. Skicka meddelanden till nätverket från enheten.
+
+Förväntat resultat
+------------------
+Centralenheten bör upptäcka främmande trafik och larma.

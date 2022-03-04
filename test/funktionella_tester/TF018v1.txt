@@ -1,0 +1,27 @@
+KLAR FÖR TEST
+
+ID
+--
+TF018v1
+
+Namn
+----
+Test av centralenhetens larmfunktion
+
+Beskrivning
+-----------
+Syfte: Verifiera att centralenhetens larmar tills en fyrsiffrig kod knappas in på knappsatsen.
+Komponent: C
+Krav: K02
+
+Teststeg
+--------
+1. Starta larm.
+2. Vänta tills centralenheten larmar.
+3. Mata in fel fyrsiffrig kod.
+4. Mata in rätt fyrsiffrig kod.
+5. Upprepa steg 1-4 med olika larm.
+
+Förväntat resultat
+------------------
+Larmet ska fortsätta tills rätt kod matas in.

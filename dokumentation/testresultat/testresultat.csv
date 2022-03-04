@@ -1,0 +1,32 @@
+Namn testare,Datum,ID,Hårdvara,Mjukvara,Faktiskt resultat,Status,Kommentar
+Christoffer Kaltenbrunner,2019-10-30,TP001v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,Ultraljudsmätaren har en räckvidd på ca 3 meter.
+Christoffer Kaltenbrunner,2019-10-30,TA001v1,MD407b; MD407c; MD407d,P1_20191030a; P2_20191030b; C_20191030a,,G,Alla enheter bör skriva ut enhets-info vid uppstart.
+Erik Söderpalm; Jakob Wik,2019-10-30,TF015v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm; Jakob Wik,2019-10-30,TF013v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm; Jakob Wik,2019-10-30,TF011v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm; Jakob Wik,2019-10-30,TF003v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm; Jakob Wik,2019-10-30,TF002v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm; Jakob Wik,2019-10-30,TF001v1,MD407b; MD407c,P1_20191030a; C_20191030a,,G,
+Erik Söderpalm,2019-10-30,TF018v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm,2019-10-30,TF016v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm,2019-10-30,TF012v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm,2019-10-30,TF007v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm,2019-10-30,TF005v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-30,TF004v1,MD407b; MD407c,P2_20191030a; C_20191030a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF014v1,MD407c; MD407d,P1_20191027a; P1_20191027b; C_20191027a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF015v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF013v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF011v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF003v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF002v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,En bargraph används istället för lysdioder för releasen
+Erik Söderpalm; Christoffer Kaltenbrunner,2019-10-27,TF001v1,MD407c; MD407d,P1_20191027a; C_20191027a,,G,
+Lam Nguyen; Christoffer Kaltenbrunner,2019-10-16,TF017v1,MD407b; MD407c; MD407d,P2_20191016a; C_20191016a,,G,Störenheten använder ny version av mjukvaran för varje försök
+Lam Nguyen; Christoffer Kaltenbrunner,2019-10-16,TF006v1,MD407b; MD407c; MD407d,P2_20191016a; C_20191016a,,G,
+Lam Nguyen; Christoffer Kaltenbrunner,2019-10-16,TP002v1,MD407b; MD407c; MD407d,P2_20191016a; C_20191016a,,G,Centralenheten klarar ca 50 meddelande/sekund innan terminalfönstret hänger sig
+Christoffer Kaltenbrunner,2019-10-16,TF009v1,MD407b; MD407c; MD407d,P2_20191016a; P2_20191016b; C_20191016a,,G,
+Christoffer Kaltenbrunner,2019-10-16,TF018v1,MD407b; MD407c,P2_20191016a; C_20191016a,,G,
+Christoffer Kaltenbrunner,2019-10-16,TF016v1,MD407b; MD407c,P2_20191016a; C_20191016a,,G,
+Christoffer Kaltenbrunner,2019-10-16,TF004v1,MD407b; MD407c,P2_20191016a; C_20191016a,,G,
+Christoffer Kaltenbrunner,2019-10-15,TF005v1,MD407b; MD407c,P2_20191015a; C_20191015a,,G,
+Christoffer Kaltenbrunner,2019-10-15,TF007v1,MD407b; MD407c,P2_20191015a; C_20191015a,,G,
+Christoffer Kaltenbrunner,2019-10-15,TF012v1,MD407b; MD407c,P2_20191015a; C_20191015a,,G,

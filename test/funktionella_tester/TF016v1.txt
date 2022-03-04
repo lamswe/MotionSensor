@@ -1,0 +1,25 @@
+KLAR FÖR TEST
+
+ID
+--
+TF016v1
+
+Namn
+----
+Test av kalibrering och känslighetsjustering av rörelsemätaren.
+
+Beskrivning
+-----------
+Syfte: Verifiera känsligheten för rörelsemätaren kan ställas in samt att den kan kalibreras.
+Komponent: P2 och C
+Krav: K08
+
+Teststeg
+--------
+1. Kalibrera rörelsemätaren från centralenheten.
+2. Ställ in känsligheten för rörelsemätaren från centralenheten.
+3. Verifiera att rörelsemätaren är kalibrerad och har rätt känslighet.
+
+Förväntat resultat
+------------------
+Rörelsemätaren är kalibrerad och har rätt känslighet.

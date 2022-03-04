@@ -1,0 +1,32 @@
+KLAR FÖR TEST
+
+ID
+--
+TF001v1
+
+Namn
+----
+Test av dörrlarm
+
+Beskrivning
+-----------
+Syfte: Verifiera att dörrlarmet fungerar enligt spefikation i projektrapporten.
+Komponent: P1 (steg 1-3) och C (steg 4-5)
+Krav: K01 (steg 1-3) och K02 (steg 4-5)
+
+Teststeg
+--------
+1. Låt dörren stå öppen.
+2. Vänta tills enheten larmar lokalt.
+3. Vänta tills enheten larmar centralenheten.
+4. Mata in fel kod på centralenhetens knappsats.
+5. Mata in rätt kod på centralenhetens knappsats.
+6. Upprepa setg 1-5 flera gånger.
+
+Förväntat resultat
+------------------
+Efter en viss tid ska enheten larma lokalt, dvs. en röd lysdiod ska tändas.
+Efter ytterligare en viss tid ska enheten larma centralenheten.
+När fel kod matas in ska larmet fortsätta.
+När rätt kod matas in ska larmet sluta.
+

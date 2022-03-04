@@ -1,0 +1,24 @@
+KLAR FÖR TEST
+
+ID
+--
+TF014v1
+
+Namn
+----
+Test av flera dörrenheter på nätverket.
+
+Beskrivning
+-----------
+Syfte: Verifiera att flera dörrenheter kan kopplas upp på nätverket.
+Komponent: N, P1
+Krav: K04
+
+Teststeg
+--------
+1. Koppla upp flera dörrlarmsenheter på nätverket.
+2. Verifiera att samtliga dörrlarmsenheter fungerar.
+
+Förväntat resultat
+------------------
+Samtliga dörrlarmsenheter ska fungera.

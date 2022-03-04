@@ -1,0 +1,410 @@
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF001v1 \\ \hline
+\textbf{Namn} & Test av dörrlarm\\ \hline
+\textbf{Beskrivning} & Syfte: Verifiera att dörrlarmet fungerar enligt spefikation i projektrapporten. \newline
+Komponent: P1 (steg 1-3) och C (steg 4-5) \newline
+Krav: K01 (steg 1-3) och K02 (steg 4-5) \\ \hline
+\textbf{Teststeg} & 1. Låt dörren stå öppen. \newline
+2. Vänta tills enheten larmar lokalt. \newline
+3. Vänta tills enheten larmar centralenheten. \newline
+4. Mata in fel kod på centralenhetens knappsats. \newline
+5. Mata in rätt kod på centralenhetens knappsats. \newline
+6. Upprepa setg 1-5 flera gånger. \\ \hline
+\textbf{Förväntat resultat} & Efter en viss tid ska enheten larma lokalt, dvs. en röd lysdiod ska tändas. 
+Efter ytterligare en viss tid ska enheten larma centralenheten.
+När fel kod matas in ska larmet fortsätta.
+När rätt kod matas in ska larmet sluta.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF002v1 \\ \hline
+\textbf{Namn} & Inaktivering och aktiviering av dörrlarm \\ \hline
+\textbf{Beskrivning} & Syfte: Verifiera att inaktivering och aktivering av dörrlarm fungerar. \newline
+Komponent: P1 \newline
+Krav: K06 \\ \hline
+\textbf{Teststeg} & 1. Inaktivera larmet på en dörr. \newline
+2. Ställ upp dörren. \newline
+3. Vänta.\newline
+4. Stäng dörren.\newline
+5. Aktivera dörrlarmet.\newline
+6. Ställ upp dörren.\newline
+7. Vänta tills larmet går.\newline
+8. Stäng av larmet.\newline
+9. Upprepa steg 1-8 flera gånger.\\ \hline
+\textbf{Förväntat resultat} & När larmet är inaktiverat ska en grön lysdiod lysa på centralenheten och larmet
+INTE gå när dörren står öppen.
+När larmet är aktiverat ska larmet gå när dörren står öppen.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF003v1 \\ \hline
+\textbf{Namn} & Konfigurering av tid en dörr tillåts vara öppen \\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att tiden en dörr tillåts vara öppen kan ändras via 
+centralenheten.\newline
+Komponent: P1 och C\newline
+Krav: K06
+\\ \hline
+\textbf{Teststeg} &
+1. Konfigurera tiden en dörr tillåts vara öppen via centralenheten. \newline
+2. Öppna dörren. \newline
+3. Vänta tills larmet går. \newline
+4. Upprepa steg 1-3 flera gånger med olika tider.
+\\ \hline
+\textbf{Förväntat resultat} & Efter att tiden som konfigurerats via centralenheten passerat ska larmet gå.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF004v1 \\ \hline
+\textbf{Namn} & Test av avståndsmätare, rörelselarm \\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att avståndsmätaren i rörelselarmet fungerar enligt
+specifikationen i projektrapporten. \newline
+Komponent: P2\newline
+Krav: K07
+\\ \hline
+\textbf{Teststeg} &
+1. Kalibrera avståndsmätaren.\newline
+2. Ställ in känslighet.\newline
+3. Gå inom känslighetsområdet för avståndsmätaren.\newline
+3. Upprepa steg 2-3 med olika känslighet.
+\\ \hline
+\textbf{Förväntat resultat} & Larmet ska gå när någon rör sig inom avståndsmätarens känslighetsområde.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF005v1 \\ \hline
+\textbf{Namn} & Test av vibrationssensor, rörelselarm \\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att vibrationssensorn i rörelselarmet fungerar enligt
+specifikationen i projektrapporten.\newline
+Komponent: P2\newline
+Krav: K09
+\\ \hline
+\textbf{Teststeg} &
+1. Ställ in känsligheten för vibrationssensorn.\newline
+2. Simulera att en glasruta krossas.\newline
+3. Upprepa steg 1-2 med olika känslighet för vibrationssensorn.
+\\ \hline
+\textbf{Förväntat resultat} & När simuleringen av att en glasruta krossas sker, ska larmet gå.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF006v1 \\ \hline
+\textbf{Namn} & Test av nätverket\\ \hline
+\textbf{Beskrivning} &
+Syfte: Testa nätverkets funktion vid olika belastningsgrader.\newline
+Komponent: Nätverk\newline
+Krav: Saknas
+\\ \hline
+\textbf{Teststeg} &1. Anslut en störenhet till nätverket.\newline
+2. Justera datavolymen störenheten ska skicka.\newline
+3. Starta störenheten.\newline
+4. Upprepa steg 2-3 med olika datavolym.
+\\ \hline
+\textbf{Förväntat resultat} & Nätverket ska klara en hög databelastning.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF007v1 \\ \hline
+\textbf{Namn} & Test av centralenheten, uppstart\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att centralenheten känner till anslutna enheter och deras konfigurering vid uppstart. \newline
+Komponent: C\newline
+Krav: K12
+\\ \hline
+\textbf{Teststeg} &
+1. Verifiera att centralenheten känner till anslutna enheter och deras 
+konfiguration vid uppstart.
+\\ \hline
+\textbf{Förväntat resultat} & Se teststeg 1.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF009v1 \\ \hline
+\textbf{Namn} & Test av centralenheten, periferienhet kopplas från nätverket\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att centralenheten larmar om en periferienhet kopplas från nätverket.\newline
+Komponent: C\newline
+Krav: K13
+\\ \hline
+\textbf{Teststeg} &
+1. Anslut en periferienhet till nätverket.\newline
+2. Koppla bort periferienheten från nätverket genom att dra ut 
+strömförsörjningsadaptern.
+\\ \hline
+\textbf{Förväntat resultat} & Centralenheten ska larma.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF011v1 \\ \hline
+\textbf{Namn} & Test av centralenheten larmfunktion (1/2)
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att när ett larm uppstår kommunicerar centralenheten det till en ansluten PC via USART.\newline
+Komponent: C och P1\newline
+Krav: K11
+\\ \hline
+\textbf{Teststeg} &
+1. Starta ett larm från P1.\newline
+2. Upprepa steg 1 med samtliga olika sätt att starta larm på.
+\\ \hline
+\textbf{Förväntat resultat} & När larmet går kommunicerar centralenheten detta till en ansluten PC.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF012v1 \\ \hline
+\textbf{Namn} & Test av centralenheten larmfunktion (2/2)
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att när ett larm uppstår kommunicerar centralenheten det till en ansluten PC via USART. \newline
+Komponent: C och P2\newline
+Krav: K11
+\\ \hline
+\textbf{Teststeg} &
+1. Starta ett larm från P2.\newline
+2. Upprepa steg 1 med samtliga olika sätt att starta larm på.
+\\ \hline
+\textbf{Förväntat resultat} & När larmet går kommunicerar centralenheten detta till en ansluten PC.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF013v1 \\ \hline
+\textbf{Namn} & Test av centralenheten larmfunktion (2/2)
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att flera dörrar kan larmas med samma enhet.\newline
+Komponent: P1\newline
+Krav: K03
+\\ \hline
+\textbf{Teststeg} &
+1. Larma flera dörrar från P1.\newline
+2. Upprepa steg 1 med olika antal dörrar.
+\\ \hline
+\textbf{Förväntat resultat} & Flera dörrar ska kunna larmas med samma enhet.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF014v1 \\ \hline
+\textbf{Namn} & 
+Test av flera dörrenheter på nätverket.
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att flera dörrenheter kan kopplas upp på nätverket.\newline
+Komponent: N, P1\newline
+Krav: K04
+\\ \hline
+\textbf{Teststeg} &
+1. Koppla upp flera dörrlarmsenheter på nätverket.\newline
+2. Verifiera att samtliga dörrlarmsenheter fungerar.
+\\ \hline
+\textbf{Förväntat resultat} & Samtliga dörrlarmsenheter ska fungera.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF015v1 \\ \hline
+\textbf{Namn} & 
+Test av konfiguration av antalet dörrar på P1.
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att antalet dörrar för en dörrlarmsenhet kan konfigureras.\newline
+Komponent: P1\newline
+Krav: K05
+\\ \hline
+\textbf{Teststeg} &
+1. Konfigurera antalet dörrar för en dörrlarmsenhet vid uppstart.
+\\ \hline
+\textbf{Förväntat resultat} & Antalet dörrar ska kunna konfigureras.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF016v1 \\ \hline
+\textbf{Namn} & 
+Test av kalibrering och känslighetsjustering av rörelsemätaren.
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera känsligheten för rörelsemätaren kan ställas in samt att den kan kalibreras.\newline
+Komponent: P2 och C\newline
+Krav: K08
+\\ \hline
+\textbf{Teststeg} &
+1. Kalibrera rörelsemätaren från centralenheten.\newline
+2. Ställ in känsligheten för rörelsemätaren från centralenheten.\newline
+3. Verifiera att rörelsemätaren är kalibrerad och har rätt känslighet.
+\\ \hline
+\textbf{Förväntat resultat} & Rörelsemätaren är kalibrerad och har rätt känslighet.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF017v1 \\ \hline
+\textbf{Namn} & 
+Test av störenheten
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att volymen data som störenheten skickar kan justeras.\newline
+Komponent: S\newline
+Krav: K10
+\\ \hline
+\textbf{Teststeg} &
+1. Ändra volymen data som störenheten kan skicka.\newline
+2. Verifiera att volymen data som störenheten skickar är ändrad.
+\\ \hline
+\textbf{Förväntat resultat} & Volymen data som störenheten skickar är ändrad enligt specifikation.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TF018v1 \\ \hline
+\textbf{Namn} & 
+Test av centralenhetens larmfunktion
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att centralenhetens larmar tills en fyrsiffrig kod knappas in på knappsatsen.\newline
+Komponent: C\newline
+Krav: K02
+\\ \hline
+\textbf{Teststeg} &
+1. Starta larm.\newline
+2. Vänta tills centralenheten larmar.\newline
+3. Mata in fel fyrsiffrig kod.\newline
+4. Mata in rätt fyrsiffrig kod.\newline
+5. Upprepa steg 1-4 med olika larm.
+\\ \hline
+\textbf{Förväntat resultat} & Larmet ska fortsätta tills rätt kod matas in.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TP001v1 \\ \hline
+\textbf{Namn} & 
+Rörelsesensorns räckvidd
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Undersök räckvidden för rörelsesensorn.\newline
+Komponent: P2\newline
+Krav: Saknas
+\\ \hline
+\textbf{Teststeg} &
+1. Undersök räckvidden för rörelsesensorn.
+\\ \hline
+\textbf{Förväntat resultat} & Se teststeg 1.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TP001v1 \\ \hline
+\textbf{Namn} & 
+Störning på CAN-bussen
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Undersöka hur mycket störning systemet klarar på CAN-bussen.\newline
+Komponent: CAN-buss\newline
+Krav: Saknas
+\\ \hline
+\textbf{Teststeg} &
+1. Undersök hur mycket störning systemet klarar på CAN-bussen.
+\\ \hline
+\textbf{Förväntat resultat} & Se teststeg 1.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{| p{0.18\linewidth} | p{0.72\linewidth} |}
+\hline
+\textbf{ID} & TA001v1 \\ \hline
+\textbf{Namn} & 
+Test av systemet utifrån ett användarperspektiv
+\\ \hline
+\textbf{Beskrivning} &
+Syfte: Verifiera att systemet har en god användarupplevelse.\newline
+Komponent: P1, P2, C\newline
+Krav: Saknas.
+\\ \hline
+\textbf{Teststeg} &
+1. Starta upp systemet.\newline
+2. Använd systemet.
+\\ \hline
+\textbf{Förväntat resultat} & Systemet ska ha en god användarupplevelse.
+Kommentarer ska antecknas.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\newpage

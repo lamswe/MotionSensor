@@ -1,0 +1,33 @@
+KLAR FÖR TEST
+
+ID
+--
+TF002v1
+
+Namn
+----
+Inaktivering och aktiviering av dörrlarm
+
+Beskrivning
+-----------
+Syfte: Verifiera att inaktivering och aktivering av dörrlarm fungerar.
+Komponent: P1
+Krav: K06
+
+Teststeg
+--------
+1. Inaktivera larmet på en dörr.
+2. Ställ upp dörren.
+3. Vänta.
+4. Stäng dörren.
+5. Aktivera dörrlarmet.
+6. Ställ upp dörren.
+7. Vänta tills larmet går.
+8. Stäng av larmet.
+9. Upprepa steg 1-8 flera gånger.
+
+Förväntat resultat
+------------------
+När larmet är inaktiverat ska en grön lysdiod lysa på centralenheten och larmet
+INTE gå när dörren står öppen.
+När larmet är aktiverat ska larmet gå när dörren står öppen.

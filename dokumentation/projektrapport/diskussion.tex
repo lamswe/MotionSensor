@@ -1,0 +1,73 @@
+Detta kapitel diskuterar de olika systemens designval, huruvida projektets tidsplan varit till fördel eller inte, samt möjliga förbättringar av systemet.
+
+\subsection{Projektets tidsplan}
+
+Enligt projektets mål och tidsplan var förhoppningen att
+systemet skulle ha ett antal tilläggsfunktioner, varav två har utvecklats.
+Anledningen till att inte fler utvecklats beror i stort på två faktorer, vilka är en felaktig fördelning 
+av arbetsuppgifter och en feluppskattning av den tid som krävdes för att utveckla grundsystemet. 
+En felaktig fördelning av arbetsuppgifter innebär att strategin att utveckla delar av systemet i kodlag, om två personer per lag, inte fungerade, ty en arbetstimme är lika med två mantimmar.
+
+Det är svårt att avgöra om larmsystemet hade haft exempelvis ett bättre användargränssnitt, eller fler konfigurationsmöjligheter för användaren, ifall en bättre fördelning av arbetsuppgifterna hade förekommit. 
+Alternativt om projektets mål var för högt satta i förhållande till 
+den tidsram som de skulle uppnås i. Trots detta ses den övergripliga tidsplanen, vilken låg som grund för projektet, fortfarande som något positivt. Den gav utrymme för motgångar i utvecklingen och satte mindre press på utvecklarna.
+
+\subsection{CAN: Säkerhetsrisk och tänkbara åtgärder}
+
+CAN är ett enkelt kommunikationssystem som uppfyller kraven för snabbhet, men CAN:s brist i säkerhet lämnar mycket övrigt att önska. Exempelvis om en inkräktare har fysisk tillgång till databussen så har den direkt åtkomst till all kommunikation i nätverket. Inkräktaren har då möjlighet att läsa av och förfalska meddelanden eller blockera en enhet med en \textit{Denial-of-service}-attack (DoS).
+
+Störenheten är uppbyggd kring just denna svaghet. Den här typen av attack är enkel att utföra men svår att avstyra. 
+Med hjälp av meddelandefilter kan en enhet filtrera oönskade meddelanden, vilket inte räcker till för att skydda enheten mot en återuppspelnings-attack (\textit{eng.} replay-attack). Återuppspelnings-attackens svaghet är att den inte påbörjas förrän den hittar något meddelande att förfalska. Ett skyddssystem för nätverk som använder CAN kan utvecklas kring den här svagheten. Om en enhet i ett CAN-kommunikationsnätverk blockerar meddelandets ID direkt efter mottagning kommer det förfalskade meddelandet från inkräktaren inte ha någon effekt, eftersom det kommer att filtreras bort. Men då måste ett nytt ID tilldelas till den enheten så att andra riktiga enheter i nätverket kan skicka till den utan att framtida meddelanden också blir filtrerade. Det nya ID:t ska vara förbestämt eller medskickat i meddelandet så att enheterna känner till varandras ID:n utan direkt kommunikation.
+
+En annan svaghet med CAN är att alla meddelanden tas emot av samtliga noder som befinner sig i nätverket. Därför är krypteringen av meddelandet ett väsentligt krav. Vårt system använder sig av en egenbyggd krypteringsalgoritm som roterar alla bitar i meddelandets datafält ett antal steg åt höger. Antal steg bestäms beroende på meddelandets ID-fält. Detta innebär att antalet steg varierar, vilket försvårar dekrypteringsförsök utan tillkännande av algoritmen och meddelandets ID-fält. 
+
+Dessa skydd minskar risken för ett CAN-kommunikationssystem, men det behåller ändå viktiga egenskaper.
+
+\subsection{Konstruktion av störenheten}
+
+CAN-bussen kan konfigureras till att hantera en datamängd upp till och med 1 Mbps. Störenheten kan blockera kommunikationen mellan enheterna genom att skicka den mängden data med högsta meddelandeprioritet på CAN-bussen. Störenheten blockerar då all övrig kommunikation på nätverket.
+
+Störenheten använder sig också av återspeglings-attacker för att störa andra enheter på nätverket. Den är konstruerad att hela tiden jämföra infångade meddelandens prioriteringar med varandra och förfalska dem med högst prioritet. Därmed har störenheten möjlighet att blockera kommunikationen till och från en viktig enhet i nätverket. Nackdelen med denna typ av attack är att den inte börjar förrän något meddelande skickas på CAN-bussen. Vidare om det fångade meddelandet har ett blockerat ID misslyckas attacken.
+
+\subsection{Fördelar med avbrott}
+
+Alla tidskritiska händelser i systemet genererar ett avbrott. Det som är fördelaktigt med detta är att processorn hanterar händelsen i den stund den sker, istället för om det legat i huvudprogrammet och utförs i en viss ordning. Allt som inte är tidskritiskt hanteras av respektive enhets huvudprogram.
+
+Så lite som möjligt ska ske i en avbrottsrutin: nödvändiga initieringar, sätta en flagga och kvittera avbrottet. Resten hanteras av huvudprogrammet. På så sätt undviks att hela systemet kan komma att sluta fungera på grund av en \textit{busy wait}.
+
+\subsection{Möjliga förbättringar av systemet}
+
+Nedan redogörs för ett antal möjliga förbättringar av systemet.
+
+\subsubsection*{Ping}
+
+Ett problem med ping-funktionen som den nu är implementerad är att om samtliga enheter kopplas från nätverket så slutar centralenheten att larma. Detta beror på att centralenheten inte kan skicka ut några meddelanden på nätverket eftersom det inte finns några mottagarnoder. Den enklaste lösningen på problemet vore att låta alla enheter på nätverket med ett bestämt tidsintervall pinga centralenheten istället för tvärtom. Om samtliga enheter kopplas från nätverket kommer nu centralenheten att larma.
+
+\subsubsection*{Bekräftelse av meddelanden}
+
+För denna version av systemet bekräftas inte meddelanden som skickas på nätverket. Detta innebär att om ett meddelande, av någon anledning, inte kommer fram till mottagaren, så är meddelandet förlorat. För att lösa problemet bör en bekräftelse på varje mottaget meddelande skickas från mottagaren till sändaren. Om sändaren inte mottager en bekräftelse inom en viss tid så skickas meddelandet igen.
+
+Detta skulle även lösa ett problem då larm för flera enheter uppstår samtidigt. CAN har nämligen bara stöd för upp till och med tre stycken inkorgar. Om fler än tre larm kommer samtidigt så går de sista förlorade. I ett system som bekräftar meddelanden kommer de tre första meddelanden att bekräftas. Resterande meddelanden kommer att skickas av sändaren igen, tills samtliga meddelanden bekräftats.
+
+\subsubsection*{Okänd aktivitet på nätverket}
+
+Antag att centralenheten stödjer upp till och med $n$ enheter på nätvärket och att den är konfigurerad för $m < n$ enheter. Om en enhet med ID $i$ så att $m < i <= n$ kopplas upp på nätverket och ett larm startas från den enheten, så kommer centralenheten att larma för enhet $i$. Det är användarens ansvar att konfigurera systemet för endast de enheterna som används. Dock kan detta lösas genom att centralenheten, innan den larmar, kontrollerar att den faktiskt är konfigurerad för att stödja enheten som larmar. Om inte, så larmar den för att den upptäckt okänd aktivitet på nätverket.
+
+\subsubsection*{Prioritering för meddelandetyper}
+
+Ping-meddelanden har id 0x4, vilket är högre än både kommando-meddelanden och konfigurationsmeddelanden, 0x2 respektive 0x3. I nästa version av systemet bör ping-meddelanden ha högre prioritet än de andra ovan nämnda meddelandetyperna.
+
+\subsubsection*{Rörelselarmsenheten}
+
+Rörelsedetektorn är konstruerad så att den fyra gånger i sekunden mäter tiden, $t_{i}$, det tar för ultraljudet att komma tillbaka till enheten. Därefter beräknas sträckan, $s_{i}$, som ultraljudet rört sig. Denna sträcka jämförs med sträckan vid mätningen innan, $s_{i-1}$. Om skillnaden, $d = | s_{i} - s_{i-1} |$, överskrider ett visst värde går larmet. Ultraljudsmätaren kalibreras vid uppstart av systemet vilket innebär att $t_{0}$ beräknas. Därefter går programmet in i huvudloopen där $t_{1}$ beräknas och jämförs med $t_{0}$.
+
+Ett motargument till detta sätt att konstruera rörelselarmsenheten är att eftersom varje mätning jämförs med mätningen som gjordes gången innan så kan någon långsamt smyga fram till sensorn och ställa en låda framför utan att larmet går. Noggranna tester av rörelselarmet visar att med rätt känslighet inställd går inte detta.
+
+Detta sätt att konstruera rörelselarmet tillåter att något rör sig en viss sträcka under en viss tid. Genom att ställa in rätt känslighet är detta inte en säkerhetsrisk. Ett annat sätt att konstruera enheten på vore att alltid jämföra den senast mätta sträckan med initieringsvärdet så att $d = | s_{i} - s_{0} |$.
+
+För att undvika felmätningar bör ultraljudsmätaren mäta flera gånger vid varje mätning, exempelvis fem mätningar och använda medianen av dessa.
+
+
+\subsubsection*{Förslag efter användartest}
+
+Ett användartest har med godkänt resultat utförst på hela systemet. Testarens kommentar anger att samtliga enheter bör skriva ut enhets-information, till exempel enhets-ID och typ av enhet, vid uppstart.

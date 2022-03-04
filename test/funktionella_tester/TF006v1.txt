@@ -1,0 +1,26 @@
+KLAR FÖR TEST
+
+ID
+--
+TF006v1
+
+Namn
+----
+Test av nätverket
+
+Beskrivning
+-----------
+Syfte: Testa nätverkets funktion vid olika belastningsgrader.
+Komponent: Nätverk
+Krav: Saknas
+
+Teststeg
+--------
+1. Anslut en störenhet till nätverket.
+2. Justera datavolymen störenheten ska skicka.
+3. Starta störenheten.
+4. Upprepa steg 2-3 med olika datavolym.
+
+Förväntat resultat
+------------------
+Nätverket ska klara en hög databelastning.
